@@ -55,22 +55,30 @@ async function method(inputs: {
       .initialize()
       .raw([clearBuffer])
       .raw([alignCenter])
-      .image(img, 320, 320, "atkinson")
-      .raw([alignLeft])
       .line(`${today} - ${currrentTime}`)
+      .line('--------------------------------------')
+      .image(img, 240, 240, "atkinson")
+      .line('\n-------Thanks for the bitties!-------')
       .raw([boldOn])
       .raw([largeText])
       .line(`${userName}`)
       .raw([boldOff])
+      .raw([alignLeft])
       .raw([normalText])
-      .line(
-        `Donated ${userBits} bits, they have donated a total of ${userLifetimeBits} bits!!`
-      )
-      .line(`They said:`)
+      .line(`${userName} donated ${userBits} bits!`)
+      .line(`With a lifetime total of ${userLifetimeBits} bits donated!!`)
+      .line(`Let's see what they had to say O.O`)
+      // each ${gap} represents 10 line breaks... 
+      //  creating room draw some art on the receipt...
       .line(`${userMessage} ${gap} ${gap}`)
-      .line('lol wtf is this printer doing')
+      .raw([alignCenter])
+      .line('--------------------------------------')
+      // These four .newline() functions stop the POS-80C from cutting early
       .newline()
-      .raw([[ 0x1d, 0x56, 0x00 ]])
+      .newline()
+      .newline()
+      .newline()
+      .cut("partial")
       .encode();
 
     // this is a string representation
