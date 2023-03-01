@@ -1,0 +1,13 @@
+[date] - [time]
+[doubleOn]Subber: [$recipient_display_name][doubleOff]
+[boldOn]Gifter: Anonymous [boldOff]
+[$month_total] months
+[horizontalLine]
+[boldOn][$tier] [$context] [boldOff]
+
+[boldOn]Message:[boldOff]
+[$message]
+
+
+
+[fullCut]

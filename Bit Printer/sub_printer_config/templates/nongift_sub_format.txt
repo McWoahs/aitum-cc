@@ -1,0 +1,21 @@
+[date] - [time]
+[doubleOn]Subber: [$name][doubleOff]
+[$month_total] months
+[horizontalLine]
+[boldOn][$tier] [$context] [boldOff]
+
+[boldOn]Message:[boldOff]
+[$message]
+
+
+
+
+
+
+
+
+
+
+
+
+[fullCut]

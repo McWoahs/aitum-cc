@@ -1,0 +1,32 @@
+[date] - [time]
+[doubleOn][$name][doubleOff]
+[boldOn]Donated:[boldOff] [$amount] Bits! \(^-^)/
+[boldOn]Total Lifetime Donated:[boldOff] [$total] Bits!
+
+[boldOn][$name] said:[boldOff]
+[$message]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[fullCut]
