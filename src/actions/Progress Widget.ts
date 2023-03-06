@@ -10,7 +10,7 @@ const name: string = 'Progress Bar';
 
 // The custom code inputs
 const inputs: ICCActionInputs = {
-  testStringInput: new StringInput('What is your name?', { required: false }),
+  testStringInput: new StringInput('Background Color', { required: false }),
 }
 
 // The code executed.

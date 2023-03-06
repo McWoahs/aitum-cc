@@ -10,14 +10,12 @@ import { WebsocketService } from './services/WebsocketService';
 
 // *************experiment*************
 
-// const io = new Server(server, { cors: { origin: "*" } });
+
 
 WebService.get();
 WebsocketService.get();
 
-// io.on("connection", (socket) => {
-//     console.log("Temp Connection With Action: " + socket.id)
-// })
+
 
 // *************experiment*************
 
