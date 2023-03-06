@@ -1,2 +1,2 @@
-cd "C:\Users\mcwoa\Documents\Aitum CC\aitum-cc-main\aitum-cc-main\src\actions"
+cd "C:\Users\mcwoa\src\aitum-cc"
 npm start

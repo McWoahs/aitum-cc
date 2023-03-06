@@ -2,6 +2,27 @@ import { AitumCC } from 'aitum.js';
 import * as dotenv from 'dotenv';
 import { resolve } from 'path';
 import { readdirSync } from 'fs';
+import  express  from 'express';
+import  { Server } from 'socket.io';
+
+import { WebService } from './services/WebService';
+import { WebsocketService } from './services/WebsocketService';
+
+// *************experiment*************
+
+// const io = new Server(server, { cors: { origin: "*" } });
+
+WebService.get();
+WebsocketService.get();
+
+// io.on("connection", (socket) => {
+//     console.log("Temp Connection With Action: " + socket.id)
+// })
+
+// *************experiment*************
+
+
+
 
 /*******************************************
  *                WARNING                  *
