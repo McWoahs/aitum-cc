@@ -15,6 +15,8 @@ import { WebsocketService } from './services/WebsocketService';
 WebService.get();
 WebsocketService.get();
 
+// initialize Bit Goal Progress Bar
+
 
 
 // *************experiment*************
