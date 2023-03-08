@@ -4,7 +4,6 @@ import { resolve } from 'path';
 import { readdirSync } from 'fs';
 import  express  from 'express';
 import  { Server } from 'socket.io';
-
 import { WebService } from './services/WebService';
 import { WebsocketService } from './services/WebsocketService';
 

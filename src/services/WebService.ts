@@ -1,5 +1,9 @@
 import express, { Application, Request, Response } from 'express';
 import { createServer, Server } from 'http';
+var fs  = require('fs');
+
+let data = fs.readFileSync('src/db/pbwDB.json')
+let pbwDB = JSON.parse(data);
 
 // google "singleton"
 export class WebService {
@@ -24,6 +28,8 @@ export class WebService {
     this.app.use(express.static('public'));
 
     this.app.get("/", this.indexHit);
+    
+    this.app.get('/data', this.dataBase);
   }
 
   private app?: Application;
@@ -40,4 +46,9 @@ export class WebService {
   private indexHit(req: Request, res: Response) {
     res.render("progress");
   } 
+
+ 
+  private dataBase(req: Request, res: Response){
+    res.json(pbwDB);
+  }
 }

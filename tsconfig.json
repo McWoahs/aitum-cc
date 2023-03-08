@@ -63,6 +63,6 @@
     /* Advanced Options */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
   },
-  "include": ["src/**/*", "../express-stuff/backup-progress-bar"],
+  "include": ["src/**/*", "../express-stuff/backup-progress-bar", "public/js/progress.js", "views/progress.js", "views/progress.js"],
   "exclude" : ["node_modules", "aitum-cc/**/*"]
 }

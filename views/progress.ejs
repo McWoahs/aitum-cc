@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="/styles/styles.css">
-    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script type="module" src="/js/progress.js" defer></script>
 </head>
+
 <body>
 
-    <div class="container">
-      <div class="goalTotal"></div>
-        <div class="progress">
-          <div class="bar">
-            <p class="percentage"></p>
-        </div>
+  <div class="container">
+    <div class="goalTotal">Bit Goal:</div>
+    <div class="progress">
+      <div class="bar">
+        <p class="percentage"></p>
       </div>
     </div>
-    <script>
-        
-        const socket = io('http://localhost:3000')
-        // confirm connection
-        socket.on('connection', console.log('Connected to the server'));
-        // receiving bit percentage from backend
-        socket.on('bitPercentage', bitPercentage => {
-          // value of vairable passed from backaend
-          console.log('Percentage of goal complete:', bitPercentage);
-          //  selecting :root to get css veriables
-          var r = document.querySelector(':root');
-
-          var rs = getComputedStyle(r);
-          console.log("Old percentage: " + rs.getPropertyValue('--progress'));
-
-          var rs = getComputedStyle(r);
-          r.style.setProperty('--progress', `${bitPercentage}` + '%');
-          console.log("New percentage:" + rs.getPropertyValue('--progress'));
-          document.querySelector(".percentage").innerHTML = `${Math.round(bitPercentage)}%`;
-        
-        })
-
-        socket.on('bitGoal', bitGoal => {
-          document.querySelector(".goalTotal").innerHTML = `Bit Goal:`;
-          document.querySelector(".goalTotal").insertAdjacentText('beforeend', `${bitGoal}`);
-          console.log("This is the bitGoal:", bitGoal.toString());
-        })
-    </script>
+  </div>
 
 </body>
+
 </html>

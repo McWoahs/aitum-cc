@@ -3,6 +3,7 @@ import { BooleanInput, FloatInput, IntInput, StringInput } from 'aitum.js/lib/in
 import { AitumCC, AitumJS } from 'aitum.js';
 import { DeviceType } from 'aitum.js/lib/enums';
 import { WebsocketService } from '../services/WebsocketService';
+var fs  = require('fs');
 
 
 /*********** CONFIG ***********/
@@ -47,7 +48,25 @@ async function method() {
   // console log result of above math as bit percentage
   console.log('Percentage of goal complete:', bitPercentage);
 
-  // Send update to frontend via socketio
+  
+  // *******Write bitGoal, bitCurrent, and bitPercentage to JSON DataBase
+  // create JSON object array
+  var dataToBeStored = {
+    "bitGoal": bitGoalNum,
+    "bitCurrent": bitCurrentNum,
+    "bitPercentage": bitPercentage
+  }
+  // stringify array and make it look pretty
+  var jsonData = JSON.stringify(dataToBeStored, null, 2);
+
+  // write json to database
+  fs.writeFile('./src/db/pbwDB.json', jsonData, finished)
+  function finished(err: any) {
+    console.log('all set.');
+  }
+
+
+  // *******Send update to frontend via socketio
   WebsocketService.get().broadcast('bitPercentage', bitPercentage);
 }
 
