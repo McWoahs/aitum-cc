@@ -2,39 +2,45 @@
 
 :root {
   --progress: 0%;
+  --rage: 0;
+  --dur: 0s;
+	--color1: #17181c;
+	--color2: #e3e4e8;
 }
 
 
 body {
-  display: grid;
-  height: 100vh;
-  place-items: center;
-  background: rgba(0, 0, 0, 1);
+  display: flex;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, .15);
   color: rgb(255, 255, 255);
   font-family: 'Orbitron', sans-serif;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 600px;
-  margin: 30px auto 0;
+  height: auto;
+  margin: auto;
 }
 
 .goalTotal {
-  font-size: 2.8rem;
-  margin-left: 21%;
+  font-size: 4rem;
+  text-align: center;
 }
 
 .progress {
   overflow: hidden;
-  height: 64px;
-  background: linear-gradient(to right, #02a4b9, #0088e2);
+  position: relative;
+  background: linear-gradient(to right, #02b9b0, #00b5e2);
   box-shadow: 0 0 32px rgb(12, 218, 245);
   border-radius: 32px;
+
 
 }
 
 .bar {
-  position: relative;
   width: var(--progress);
   height: 64px;
   background: linear-gradient(90deg,
@@ -47,11 +53,45 @@ body {
 }
 
 .percentage {
-  font-size: 2rem;
-  position: relative;
-  margin-left: 100%;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
   margin: 0;
+  text-align: center;
 }
+
+
+
+
+/* ************rage************ */
+
+span {
+  display: inline-block;
+}
+.rage {
+  font-size: 3rem;
+  text-align: center;
+}
+.c-person {
+	animation: c-rage var(--dur) linear infinite
+}
+.c-table {
+	animation: c-tableSpin var(--dur) linear infinite;
+	transform-origin: 50% 33%;
+}
+
+/* Animations */
+
+@keyframes c-rage {
+	from,10%,20%,30%,40%,50%,60%,70%,80%,90%,to{transform: translateX(0)}
+	5%,15%,25%,35%,45%,55%,65%,75%,85%,95%{transform: translateX(-5%)}
+}
+@keyframes c-tableSpin {
+	from {transform: rotate(0)}
+	to {transform: rotate(2turn)}
+}
+
+

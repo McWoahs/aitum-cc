@@ -22,6 +22,7 @@
   "dependencies": {
     "aitum.js": "^2.0.2",
     "canvas": "^2.11.0",
+    "colorjoe": "^4.2.0",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "esc-pos-encoder": "^1.3.0",
