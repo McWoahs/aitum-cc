@@ -1,7 +1,7 @@
 import { ICCActionInputs, ICustomCode } from "aitum.js/lib/interfaces";
 import { BooleanInput, FloatInput, IntInput, StringInput } from "aitum.js/lib/inputs"; 
-import { AitumCC } from "aitum.js"; 
-import { DeviceType } from "aitum.js/lib/enums"; 
+import { AitumCC } from "aitum.js";
+import { DeviceType } from "aitum.js/lib/enums";
 import { alignCenter, alignLeft, boldOff, boldOn, clearBuffer, fontA, fontB, gap, largeText, normalText, underlineAltOn, underlineOff, underlineOn } from "../types/printerTypes";
 let EscPosEncoder = require("esc-pos-encoder");
 var printer = require("printer/lib");

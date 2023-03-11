@@ -24,6 +24,20 @@ export class WebsocketService {
   // On new websocket client connection
   private onConnection(socket: Socket) {
     console.log("Client has connected... " + socket.id);
+
+    socket.on('pbwSavedColors', (data) =>{
+
+      console.log('PBW UI loaded:', data);
+
+      WebsocketService.get().broadcast('pbwSavedColors', data);
+    })
+
+    socket.on('radiusSlider', (data) =>{
+
+      console.log('Radius slider position:', data);
+
+      WebsocketService.get().broadcast('radiusSlider', data);
+    })
   }
 
   public broadcast(messageType: string, data: any) {
