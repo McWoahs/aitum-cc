@@ -48,8 +48,50 @@
                     <div class="radiusAdjust">
                         <div class="radiusAdjustText">Corner Radius</div>
                         <!-- <hr class="nameHr"> -->
-                        <input type="range" class="slider" id="slider" min="0" max="32" value="32" />
+                        <input type="range" class="slider" id="radiusSlider" min="0" max="32" value="32" />
                     </div>
+
+                    <div class="widthAdjust">
+                        <div class="widthAdjustText">Progress Bar Width</div>
+                        <!-- <hr class="nameHr"> -->
+                        <input type="range" class="slider" id="widthSlider" min="8" max="38" value="32" />
+                    </div>
+
+                    <div class="outerGlowBlurAdjust">
+                        <div class="outerGlowBlurAdjustText">Outer Glow - Blur</div>
+                        <!-- <hr class="nameHr"> -->
+                        <input type="range" class="slider" id="blurSlider" min="0" max="20" value="10" />
+                    </div>
+
+                    <div class="outerGlowSpredAdjust">
+                        <div class="outerGlowSpreadAdjustText">Outer Glow - Spread</div>
+                        <!-- <hr class="nameHr"> -->
+                        <input type="range" class="slider" id="spreadSlider" min="0" max="10" value="0" />
+                    </div>
+                    
+                      <div class="textRadio">
+                        <input type="radio" id="top" name="text_toggle" value="column" checked>
+                        <label class="text-radio" for="top">Text Top</label>
+                        <input type="radio" id="bot" name="text_toggle" value="column-reverse">
+                        <label class="text-radio" for="bot">Text Bottom</label>
+                    </div>
+
+                    <div>
+                        <label class="switch">
+                          <input type="checkbox" id="rageCheckbox">
+                          <span class="toggle"></span>
+                        </label> Rage On/Off
+                    </div>
+                     <div class="fontSelector">
+                    <select id="fontStyles">
+                        <option value="OpenSans">Open Sans</option>
+                        <option value="ComicNeue">Comic Neue</option>
+                        <option value="Poppins">Poppins</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="arial">Arial</option>
+                        <option value="impact">Impact</option>
+                    </select>
+                </div>
                 </div>
             </div>
             <div class="pbw childItem">

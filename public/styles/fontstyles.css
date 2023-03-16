@@ -1,0 +1,65 @@
+/* ComicNeue Font Family */
+@font-face {
+    font-family: "ComicNeue";
+    src: local("ComicNeueLight"),
+    url("../fonts/Comic_Neue/ComicNeue-Light.ttf") format("truetype");
+    font-weight: lighter;
+    }
+
+@font-face {
+    font-family: "ComicNeue";
+    src: local("ComicNeueRegular"),
+    url("../fonts/Comic_Neue/ComicNeue-Regular.ttf") format("truetype");
+    font-weight: normal;
+    }
+
+@font-face {
+    font-family: "ComicNeue";
+    src: local("ComicNeueBold"),
+     url("../fonts/Comic_Neue/ComicNeue-Bold.ttf") format("truetype");
+    font-weight: bold;
+    }
+
+/* OpenSans Font Family */
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSansLight"),
+    url("../fonts/Open_Sans/OpenSans-Light.ttf") format("truetype");
+    font-weight: lighter;
+    }
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSansRegular"),
+    url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    }
+
+@font-face {
+    font-family: "OpenSans";
+    src: local("OpenSansBold"),
+     url("../fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+    font-weight: bold;
+    }
+
+/* Poppins Font Family */
+@font-face {
+    font-family: "Poppins";
+    src: local("PoppinsLight"),
+    url("../fonts/Poppins/Poppins-Light.ttf") format("truetype");
+    font-weight: lighter;
+    }
+
+@font-face {
+    font-family: "Poppins";
+    src: local("PoppinsRegular"),
+    url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    }
+
+@font-face {
+    font-family: "Poppins";
+    src: local("PoppinsBold"),
+     url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: bold;
+    }

@@ -1,1 +1,18 @@
-{"color0":"#e85757","color1":"#4a0000","color2":"#57b3e8","color3":"#236286","color4":"#145da2"}
+{
+    "colors": {
+        "color0": "#119500",
+        "color1": "#3a9500",
+        "color2": "#8f00ff",
+        "color3": "#3b006a",
+        "color4": "#58fff4"
+    },
+    "settings": {
+        "radiusSlider": "20",
+        "widthSlider": "28",
+        "textRadio": "column-reverse",
+        "blurSlider": "12",
+        "spreadSlider": "6",
+        "rageToggle": false,
+        "fontChange": "OpenSans"
+    }
+}
