@@ -1,0 +1,18 @@
+{
+    "colors": {
+        "color0": "#c3c30d",
+        "color1": "#11b854",
+        "color2": "#f700ff",
+        "color3": "#6f0073",
+        "color4": "#fb89ff"
+    },
+    "settings": {
+        "radiusSlider": "13",
+        "widthSlider": "31",
+        "textRadio": "column",
+        "blurSlider": "6",
+        "spreadSlider": "3",
+        "rageToggle": false,
+        "fontChange": "Helvetica"
+    }
+}

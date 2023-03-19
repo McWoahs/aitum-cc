@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/aafdcdc0fb.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/uistyles.css">
+    <link rel="stylesheet" href="/styles/colorjoe.css">
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="/js/colorjoe.min.js"></script>
+    <script type="module" src="/js/colorjoe.js" defer></script>
+    <title>pbw UI Page</title>
+</head>
+
+<body>
+    <div class="outterWrapper">
+        <div class="innerWrapper">
+            <div class="container childItem">
+                <div class="colorConfig">
+
+                    <div class="config-title">Selected Colour</div>
+                    <div class="selected-color-text">#009578</div>
+                    <div class="selected-color"></div>
+
+                    <div class="colorjoe"></div>
+
+                    <!-- <div class="config-title">Saved Colours</div> -->
+                    <div class="colors">
+                    <div class="gradientOne">
+                        <div class="gradientOneText">Background Gradient</div>
+                        <div class="gradientColorSelector">
+                            <div class="gradientColor">
+                                <input type="text" id="gOne-Left-Input" name="saved-color-TextInput" value="#eeeeee">
+                                <button class="btn gOne-Left-Copy">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                                <button class="btn save-color">
+                                    <i class="fa-regular fa-floppy-disk"></i>
+                                </button>
+                                <div class="saved-color"></div>
+                            </div>
+                            <div class="gradientColor">
+                                <input type="text" id="gOne-Right-Input" name="saved-color-TextInput" value="#eeeeee">
+                                <button class="btn gOne-Right-Copy">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                                <button class="btn save-color">
+                                    <i class="fa-regular fa-floppy-disk"></i>
+                                </button>
+                                <div class="saved-color"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gradientTwo">
+                        <div class="gradientTwoText">Forground Gradient</div>
+                        <div class="gradientColorSelector">
+                            <div class="gradientColor">
+                                <input type="text" id="gTwo-Left-Input" name="saved-color-TextInput" value="#eeeeee">
+                                <button class="btn gTwo-Left-Copy">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                                <button class="btn save-color">
+                                    <i class="fa-regular fa-floppy-disk"></i>
+                                </button>
+                                <div class="saved-color"></div>
+                            </div>
+                            <div class="gradientColor">
+                                <input type="text" id="gTwo-Right-Input" name="saved-color-TextInput" value="#eeeeee">
+                                <button class="btn gTwo-Right-Copy">
+                                    <i class="fa-solid fa-copy"></i>
+                                </button>
+                                <button class="btn save-color">
+                                    <i class="fa-regular fa-floppy-disk"></i>
+                                </button>
+                                <div class="saved-color"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="outerGlow">
+                        <div class="outerGlowText">Outer Glow</div>
+                            <div class="outerGlowSelector">
+                                <div class="gradientColor">
+                                    <input type="text" id="glow-Input" name="saved-color-TextInput" value="#eeeeee">
+                                    <button class="btn glow-Copy">
+                                        <i class="fa-solid fa-copy"></i>
+                                    </button>
+                                    <button class="btn save-color">
+                                        <i class="fa-regular fa-floppy-disk"></i>
+                                    </button>
+                                    <div class="saved-color"></div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                </div>
+                <div class="config">
+
+
+
+                    <div class="radiusAdjust">
+                        <div class="radiusAdjustText">Corner Radius</div>
+                        <input type="range" class="slider" id="radiusSlider" min="0" max="32" />
+                    </div>
+
+                    <div class="widthAdjust">
+                        <div class="widthAdjustText">Progress Bar Width</div>
+                        <input type="range" class="slider" id="widthSlider" min="8" max="38" />
+                    </div>
+
+                    <div class="outerGlowBlurAdjust">
+                        <div class="outerGlowBlurAdjustText">Outer Glow - Blur</div>
+                        <input type="range" class="slider" id="blurSlider" min="0" max="20" />
+                    </div>
+
+                    <div class="outerGlowSpredAdjust">
+                        <div class="outerGlowSpreadAdjustText">Outer Glow - Spread</div>
+                        <input type="range" class="slider" id="spreadSlider" min="0" max="10" />
+                    </div>
+
+                    <div class="textRadio">
+                        <input type="radio" id="top" name="text_toggle" value="column">
+                        <label class="text-radio" for="top">Text Top</label>
+                        <input type="radio" id="bot" name="text_toggle" value="column-reverse">
+                        <label class="text-radio" for="bot">Text Bottom</label>
+                    </div>
+
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" id="rageCheckbox">
+                            <span class="toggle"></span>
+                        </label> Rage On/Off
+                    </div>
+                    <div class="fontSelector">
+                        <select id="fontStyles">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="pbw childItem">
+                <div class="previewTitle">PREVIEW</div>
+                <iframe class="iframe" src="http://localhost:3000" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
